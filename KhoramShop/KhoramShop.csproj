@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5400A6A0-1590-4570-9574-CD17A415B0FD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KhoramShop</RootNamespace>
+    <AssemblyName>KhoramShop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\KhoramShop.dll" />
+    <Content Include="bin\KhoramShop.pdb" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.Webpages.Deployment.dll" />
+    <Content Include="bin\System.Web.Webpages.Deployment.xml" />
+    <Content Include="bin\System.Web.Webpages.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.xml" />
+    <Content Include="bin\System.Web.Webpages.xml" />
+    <Content Include="Content\BackOffice\css\bootstrap.min.css" />
+    <Content Include="Content\BackOffice\css\plugins\dataTables.bootstrap.css" />
+    <Content Include="Content\BackOffice\css\plugins\metisMenu\metisMenu.css" />
+    <Content Include="Content\BackOffice\css\plugins\metisMenu\metisMenu.min.css" />
+    <Content Include="Content\BackOffice\css\plugins\morris.css" />
+    <Content Include="Content\BackOffice\css\plugins\social-buttons.css" />
+    <Content Include="Content\BackOffice\css\plugins\timeline.css" />
+    <Content Include="Content\BackOffice\css\sb-admin-2.css" />
+    <Content Include="Content\BackOffice\js\bootstrap.min.js" />
+    <Content Include="Content\BackOffice\js\jquery-1.11.0.js" />
+    <Content Include="Content\BackOffice\js\sb-admin-2.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\FrontOffice\css\bootstrap.css" />
+    <Content Include="Content\FrontOffice\css\bootstrap\_theme.css" />
+    <Content Include="Content\FrontOffice\css\components\Elements\_blog.css" />
+    <Content Include="Content\FrontOffice\css\components\Elements\_compare.css" />
+    <Content Include="Content\FrontOffice\css\components\Elements\_cta.css" />
+    <Content Include="Content\FrontOffice\css\components\Elements\_image-zoom.css" />
+    <Content Include="Content\FrontOffice\css\components\Elements\_maps.css" />
+    <Content Include="Content\FrontOffice\css\components\Elements\_testimonial.css" />
+    <Content Include="Content\FrontOffice\css\components\Layout\_homepages.css" />
+    <Content Include="Content\FrontOffice\css\style.css" />
+    <Content Include="Content\FrontOffice\css\_bootstrap.css" />
+    <Content Include="Content\FrontOffice\images\404.jpg" />
+    <Content Include="Content\FrontOffice\images\about-content.jpg" />
+    <Content Include="Content\FrontOffice\images\add_compare.jpg" />
+    <Content Include="Content\FrontOffice\images\AjaxLoader.gif" />
+    <Content Include="Content\FrontOffice\images\avatar1.jpg" />
+    <Content Include="Content\FrontOffice\images\banner-home3-1.png" />
+    <Content Include="Content\FrontOffice\images\banner-home3-2.png" />
+    <Content Include="Content\FrontOffice\images\banner-home3-3.png" />
+    <Content Include="Content\FrontOffice\images\bg-next-after.png" />
+    <Content Include="Content\FrontOffice\images\bg-next.png" />
+    <Content Include="Content\FrontOffice\images\bg-prev.png" />
+    <Content Include="Content\FrontOffice\images\bg-slide-show.png" />
+    <Content Include="Content\FrontOffice\images\border-contact2.png" />
+    <Content Include="Content\FrontOffice\images\contact2-icon-adress1.png" />
+    <Content Include="Content\FrontOffice\images\contact2-icon-adress2.png" />
+    <Content Include="Content\FrontOffice\images\contact2-icon-adress3.png" />
+    <Content Include="Content\FrontOffice\images\content-images.jpg" />
+    <Content Include="Content\FrontOffice\images\Dama-brand1.jpg" />
+    <Content Include="Content\FrontOffice\images\Dana-home1-banner-bottom.png" />
+    <Content Include="Content\FrontOffice\images\Dana-home1-bg-featured.jpg" />
+    <Content Include="Content\FrontOffice\images\Dana-home1-bg-featured2.jpg" />
+    <Content Include="Content\FrontOffice\images\Dana-home1-product-featured1.png" />
+    <Content Include="Content\FrontOffice\images\Dana-home1-product1.jpg" />
+    <Content Include="Content\FrontOffice\images\Dana-home1-slideshow.jpg" />
+    <Content Include="Content\FrontOffice\images\Dana-home1-time-featured.png" />
+    <Content Include="Content\FrontOffice\images\Dana-home1-time-featured1.png" />
+    <Content Include="Content\FrontOffice\images\Dana-home1-time-featured2.png" />
+    <Content Include="Content\FrontOffice\images\Dana-home1-time-featured3.png" />
+    <Content Include="Content\FrontOffice\images\Dana-home1.bg-featured.png" />
+    <Content Include="Content\FrontOffice\images\Dana-home3-slideshow.jpg" />
+    <Content Include="Content\FrontOffice\images\Dana-icon-check-box.png" />
+    <Content Include="Content\FrontOffice\images\Dana-icon-click.png" />
+    <Content Include="Content\FrontOffice\images\Dana-icon-col-list.png" />
+    <Content Include="Content\FrontOffice\images\Dana-icon-header.png" />
+    <Content Include="Content\FrontOffice\images\Dana-icon-input-newsletter.png" />
+    <Content Include="Content\FrontOffice\images\Dana-menu-logo.png" />
+    <Content Include="Content\FrontOffice\images\darkblurbg.jpg" />
+    <Content Include="Content\FrontOffice\images\favicon.png" />
+    <Content Include="Content\FrontOffice\images\Futurelife-bg-body.png" />
+    <Content Include="Content\FrontOffice\images\Hermes-footer-payment.png" />
+    <Content Include="Content\FrontOffice\images\home1-slideshow.png" />
+    <Content Include="Content\FrontOffice\images\home2-banner.png" />
+    <Content Include="Content\FrontOffice\images\home2-slideshow.png" />
+    <Content Include="Content\FrontOffice\images\home3-hot-deta.jpg" />
+    <Content Include="Content\FrontOffice\images\icon-hot-deals.png" />
+    <Content Include="Content\FrontOffice\images\icon-megamenu-header.png" />
+    <Content Include="Content\FrontOffice\images\icon-megamenu-header2.png" />
+    <Content Include="Content\FrontOffice\images\icon-megamenu-hover.png" />
+    <Content Include="Content\FrontOffice\images\icon-megamenu.png" />
+    <Content Include="Content\FrontOffice\images\icon-slider-product.png" />
+    <Content Include="Content\FrontOffice\images\images-menu.jpg" />
+    <Content Include="Content\FrontOffice\images\ImgBlog\1.jpg" />
+    <Content Include="Content\FrontOffice\images\ImgBlog\category1.jpg" />
+    <Content Include="Content\FrontOffice\images\newsletter-check.png" />
+    <Content Include="Content\FrontOffice\images\newsletter-close.jpg" />
+    <Content Include="Content\FrontOffice\images\newsletter-images.png" />
+    <Content Include="Content\FrontOffice\images\product-details-tab-1.jpg" />
+    <Content Include="Content\FrontOffice\images\product-details1.jpg" />
+    <Content Include="Content\FrontOffice\images\products\1.jpg" />
+    <Content Include="Content\FrontOffice\images\remove-item.jpg" />
+    <Content Include="Content\FrontOffice\images\slide-show-2.jpg" />
+    <Content Include="Content\FrontOffice\images\slide-show-home3.png" />
+    <Content Include="Content\FrontOffice\images\undercontruction.jpg" />
+    <Content Include="Content\FrontOffice\images\view-icon.png" />
+    <Content Include="Content\FrontOffice\js\bootstrap.min.js" />
+    <Content Include="Content\FrontOffice\js\engo-plugins.js" />
+    <Content Include="Content\FrontOffice\js\jquery-1.11.1.min.js" />
+    <Content Include="Content\FrontOffice\js\jquery.elevatezoom.js" />
+    <Content Include="Content\FrontOffice\js\jquery.themepunch.plugins.min.js" />
+    <Content Include="Content\FrontOffice\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="Content\FrontOffice\js\jqueryUI.js" />
+    <Content Include="Content\FrontOffice\js\map-icons.js" />
+    <Content Include="Content\FrontOffice\js\owl.carousel.min.js" />
+    <Content Include="Content\FrontOffice\js\price-range.js" />
+    <Content Include="Content\FrontOffice\js\store.js" />
+    <Content Include="Content\FrontOffice\js\wow.min.js" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\font-awesome.min.css" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\fonts\fontawesome-webfont78ce.svg" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-material\material-design-iconic-font.min.css" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-material\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-nexabold\index.html" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-nexabold\style.css" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-nexalight\NexaLight.ttf.svg" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-nexalight\style-font.css" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-texgyreadventor-bold\font-texgyreadventor-bold.css" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-texgyreadventor-bold\texgyreadventor-bold-webfont.svg" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-texgyreadventor\font-texgyreadventor.css" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-texgyreadventor\texgyreadventor-regular-webfont.svg" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\pe-icon-7-stroke\css\helper.css" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\pe-icon-7-stroke\css\pe-icon-7-stroke.css" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="Content\FrontOffice\vendor\animate.css" />
+    <Content Include="Content\FrontOffice\vendor\owl-slider.css" />
+    <Content Include="Content\FrontOffice\vendor\range-price.css" />
+    <Content Include="Content\FrontOffice\vendor\settings.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="obj\Debug\KhoramShop.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\KhoramShop.dll" />
+    <Content Include="obj\Debug\KhoramShop.pdb" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="bin\KhoramShop.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\KhoramShop.csprojResolveAssemblyReference.cache" />
+    <Content Include="Content\FrontOffice\css\style.css.map" />
+    <Content Include="Content\FrontOffice\sass\bootstrap.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_alerts.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_center-block.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_forms.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_grid.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_hide-text.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_image.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_labels.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_nav-vertical-align.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_opacity.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_panels.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_progress-bar.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_reset-filter.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_resize.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_responsive-visibility.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_size.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_tab-focus.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_text-overflow.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\mixins\_vendor-prefixes.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_alerts.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_badges.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_breadcrumbs.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_button-groups.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_buttons.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_carousel.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_close.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_code.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_component-animations.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_dropdowns.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_forms.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_glyphicons.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_grid.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_input-groups.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_jumbotron.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_labels.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_list-group.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_media.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_mixins.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_modals.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_navbar.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_navs.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_normalize.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_pager.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_pagination.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_panels.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_popovers.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_print.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_progress-bars.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_responsive-embed.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_responsive-utilities.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_scaffolding.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_tables.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_theme.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_thumbnails.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_tooltip.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_type.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_utilities.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_variables.scss" />
+    <Content Include="Content\FrontOffice\sass\bootstrap\_wells.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Ecommerce\item-view-templates.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Ecommerce\_cart.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Ecommerce\_checkout.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Ecommerce\_general.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Ecommerce\_pages.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Ecommerce\_single.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Ecommerce\_track-order.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Ecommerce\_widgets.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Ecommerce\_wishlist.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_about-team.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_banner1.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_blog.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_bottom-product-footer.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_brand.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_compare.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_contact-form.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_contruction.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_cta.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_icon-box.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_icon-progress-bar.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_image-zoom.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_interactive-banner.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_maps.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_newsletter.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_parallax.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_popular-product.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Elements\_shipping.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Layout\_contents.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Layout\_footers.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Layout\_general.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Layout\_headers.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Layout\_homepages.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Layout\_pages.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Layout\_sidebar.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Mixins\_functions.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Mixins\_rtl.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Mixins\_template-mixins.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Responsive\_desktop.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Responsive\_fullHd.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Responsive\_maxDesktop.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Responsive\_maxmobile.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Responsive\_maxtable.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Responsive\_smallMobile.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Responsive\_tablet.scss" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\fonts\fontawesome-webfont78ce.ttf" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\fonts\fontawesome-webfont78ce.woff" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-material\Material-Design-Iconic-Font.eot" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-material\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-material\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-material\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-nexabold\NexaFreeBoldwebfont.eot" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-nexabold\NexaFreeBoldwebfont.ttf" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-nexabold\NexaFreeBoldwebfont.woff" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-nexalight\NexaLight.ttf.eot" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-nexalight\NexaLight.ttf.woff" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-texgyreadventor-bold\texgyreadventor-bold-webfont.eot" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-texgyreadventor-bold\texgyreadventor-bold-webfont.ttf" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-texgyreadventor-bold\texgyreadventor-bold-webfont.woff" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-texgyreadventor\texgyreadventor-regular-webfont.eot" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-texgyreadventor\texgyreadventor-regular-webfont.ttf" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\font-texgyreadventor\texgyreadventor-regular-webfont.woff" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="Content\FrontOffice\sass\components\Vendor\_animation.scss" />
+    <Content Include="Content\FrontOffice\sass\components\_base.scss" />
+    <Content Include="Content\FrontOffice\sass\components\_ecommerce.scss" />
+    <Content Include="Content\FrontOffice\sass\components\_elements.scss" />
+    <Content Include="Content\FrontOffice\sass\components\_engo-mixins.scss" />
+    <Content Include="Content\FrontOffice\sass\components\_layout.scss" />
+    <Content Include="Content\FrontOffice\sass\components\_reset.scss" />
+    <Content Include="Content\FrontOffice\sass\components\_responsive.scss" />
+    <Content Include="Content\FrontOffice\sass\components\_vendor.scss" />
+    <Content Include="Content\FrontOffice\sass\prepros.cfg" />
+    <Content Include="Content\FrontOffice\sass\style.scss" />
+    <Content Include="Content\FrontOffice\sass\_bootstrap.scss" />
+    <Content Include="Areas\BackOffice\Views\web.config" />
+    <Content Include="Areas\FrontOffice\Views\web.config" />
+    <Content Include="Areas\BackOffice\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\FrontOffice\Views\Shared\_LayoutFront.cshtml" />
+    <Content Include="Areas\BackOffice\Views\Home\Index.cshtml" />
+    <Content Include="Areas\FrontOffice\Views\Home\Index.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\BackOffice\BackOfficeAreaRegistration.cs" />
+    <Compile Include="Areas\BackOffice\Controllers\HomeController.cs" />
+    <Compile Include="Areas\FrontOffice\Controllers\AccountController.cs" />
+    <Compile Include="Areas\FrontOffice\Controllers\HomeController.cs" />
+    <Compile Include="Areas\FrontOffice\FrontOfficeAreaRegistration.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerAddress.cs" />
+    <Compile Include="Models\KhoramContext.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\DataContext.cs" />
+    <Compile Include="Service\Generic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\BackOffice\Models\" />
+    <Folder Include="Areas\FrontOffice\Models\" />
+    <Folder Include="Areas\FrontOffice\Views\Account\" />
+    <Folder Include="Content\FrontOffice\css\components\Ecommerce\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>48608</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48608/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

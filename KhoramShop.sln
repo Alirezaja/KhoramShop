@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KhoramShop", "KhoramShop\KhoramShop.csproj", "{5400A6A0-1590-4570-9574-CD17A415B0FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KhoramShop.Tests", "KhoramShop.Tests\KhoramShop.Tests.csproj", "{C4F92934-FF88-4F09-AD48-EEB2CDD5099A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5400A6A0-1590-4570-9574-CD17A415B0FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5400A6A0-1590-4570-9574-CD17A415B0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5400A6A0-1590-4570-9574-CD17A415B0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5400A6A0-1590-4570-9574-CD17A415B0FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F92934-FF88-4F09-AD48-EEB2CDD5099A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F92934-FF88-4F09-AD48-EEB2CDD5099A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4F92934-FF88-4F09-AD48-EEB2CDD5099A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F92934-FF88-4F09-AD48-EEB2CDD5099A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
